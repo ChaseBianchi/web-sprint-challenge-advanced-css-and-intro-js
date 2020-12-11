@@ -245,14 +245,19 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(array){
-  // const artists20s = [];
-  // for(let i=0;i<array.length;i++){
-  // //i dont understand how to search a range of years like that. if the birth and death dates were split, i could run a loop within a loop.
-  // if(/*not sure what logic to put here*/){
-  //   artists20s.push(array[i].name);
-  // }
-  // }
-  // return artists20s;
+  const artists20s = [];
+   for(let i=0;i<array.length;i++){
+  if(array[i].years[0]==='1'){
+    if(array[i].years[1]==='9'){
+      if(array[i].years[7]==='1'){
+        if(array[i].years[8]==='9'){
+          artists20s.push(array[i].name);
+        }
+      }
+    }
+  }
+  }
+  return artists20s;
 }
 
 
@@ -357,7 +362,7 @@ Create a function called `randomize` that takes a data array as an argument and 
 function randomize(array){
     const randomArr = [];
     for(let i=0;i<array.length;i++){
-      randomArr.splice(Math.floor(Math.random()*i),0,array[i]);
+      randomArr.splice(Math.round(Math.random()*i),0,array[i]);
     }
     return randomArr;
   }
@@ -365,8 +370,19 @@ console.log(randomize(artists));
 
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
  Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
-
- 
+// im going to make a function to take the artist array and a country name and create an object with the number of paintings per country. the object will be {country: country, paintings: totalNumber}
+//Italian, Russian, Mexican, French, Belgian, Spanish, Dutch, Austrian, Flemish, Spanish,Greek
+function perCountry(array, nationality){
+  var currentTotal=0;
+  const countryTotal = {country: nationality, paintings: currentTotal}
+  for(let i=0;i<array.length;i++){
+    if(array[i].nationality===nationality){
+      return currentTotal = currentTotal + array[i].paintings;
+  }
+}
+return countryTotal;
+}
+console.log(perCountry(artists, 'German'));
  
  
  /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
