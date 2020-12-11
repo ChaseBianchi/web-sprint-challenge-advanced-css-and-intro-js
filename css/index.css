@@ -88,8 +88,8 @@ ul {
     width: 100%;
     justify-content: space-evenly;   
 }
-li {
-
+.home {
+    font-weight: bold;
 }
 .bordered {
     border-right: 2px solid #626262;
@@ -147,4 +147,38 @@ button:hover{
 }
 .artist img{
     width:100%;
+}
+
+@media(max-width:500px){
+    nav {
+        width: 60%;
+    }
+    .title-container {
+        width: 100%;
+    }
+    .title-container div {
+        width: 100%;
+    }
+    .artists-container {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .artist {
+        width: 100%;
+        height: auto;
+    }
+    .artist img {
+        width: 50%;
+        height: auto;
+    }
+    .bio {
+        width: 100%;
+    }
+    .bio p {
+        font-size: 1.2rem;
+    }
+    .title-container h1 {
+        font-size: 4rem;
+    }
 }
