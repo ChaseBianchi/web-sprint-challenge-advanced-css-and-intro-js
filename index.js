@@ -383,6 +383,8 @@ function perCountry(array, nationality){
 return countryTotal;
 }
 console.log(perCountry(artists, 'German'));
+
+// not working, out of time!
  
  
  /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
